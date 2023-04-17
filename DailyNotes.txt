@@ -82,8 +82,8 @@ class Test
 				
 				}
 
-			1)setter injection
-			2)constructor injeciton
+			1)setter injection		--><property>-->Setid
+			2)constructor injeciton		<constructor-arg>
 			3)autowiring 
 
 
@@ -117,6 +117,42 @@ springconfig.xml
 
 
 </beans>
+
+Autowiring: autowire="byName/byType/constructor"
+
+
+			BeanFactory 									ApplicationContext
+			Lazy Intializer									Eager Intializer
+        we can use in small scale applications			we can use it for large scale applications
+		
+		
+		
+Scope --->		
+
+Annotation config:
+=====================
+
+annotations are alternative for XML
+
+
+
+
+@Autowired 
+@Component --->Employee ,Address
+@Configuration
+@ComponentScan
+@Scope
+@Service
+@Repository
+
+
+NOTE : spring has given annotations for user defined classes but not for predefined classes 
+
+Java Config:
+============
+			explicit config :@Bean   <bean>
+
+
 
 
 
