@@ -1,0 +1,124 @@
+
+
+
+
+
+
+
+Spring Framework:
+================
+
+spring NON-INVASIVE framework,using spring we can create LIGHT WEIGHT and LOOSLEY COUPLED  applications
+
+
+			INVASIVE										HEAVY WEIGHT	TIGHTLY COUPLED 
+
+RAD
+
+			Invasive 	 :it will force to the developer to implement predefined API   Struts...
+			
+			non-invasive :it will never force to the developer to implement predefined API spring,hibernate
+
+
+
+	Servlets:
+
+1) implements Servlet	-5
+
+2)extends GenericServlet
+
+3)extends HttpServlet	12 
+
+
+class login extends  HttpServlet
+{
+
+
+
+}
+
+EJB:heavy weight component-->Rod Johnson
+
+Interface21 
+
+spring 1.x
+			2003
+spring 5.x
+spring 6.x			
+			2022 nov
+
+LOOSLEY COUPLED/TIGHTLY COUPLED:
+================================
+
+
+
+dependency high-->tightly coupled
+
+dependency injection
+
+
+spring core/dependency injection module/IOC:
+=============================================
+package a ;
+class Test
+{
+
+
+
+}		
+			1
+			
+					BeanFactory/ApplicationContext   -->configuration:
+																		1)XML   config
+																		2)Annotation config
+																		3)Java config
+				instantiation,configuring,wiring,destroying
+
+				class Client
+				{
+				
+				
+				
+				
+				}
+
+			1)setter injection
+			2)constructor injeciton
+			3)autowiring 
+
+
+Employee emp=new Employee();
+
+				<beans>
+						<bean class="com.nec.springcore.Employee" id="emp">
+						
+						
+						
+						</bean>
+				
+				
+				
+				</beans>
+
+Spring jars  5.x xml config 
+
+springconfig.xml
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	
+	<bean class="com.nex.springcore.Employee" id="emp">
+
+
+	</bean>
+
+
+</beans>
+
+
+
+
+
