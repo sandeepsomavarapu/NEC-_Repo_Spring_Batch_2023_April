@@ -1,0 +1,191 @@
+Layered Architecture:
+======================
+
+
+
+		DB<-->Repo/dao layer<--->Service Layer<--->controller layer/UI 
+
+
+Spring Core:
+============
+	light weight ,non-invasive,loosley coupled
+		FrameWorks
+
+			invasive 		:framework which will force to the programmer to implement predefined api
+					Ex:struts
+			non invasive    :framework which will never force to the programmer to implement predefined api
+					Ex:spring,hibernate 
+
+
+Servlet : web applications
+															
+													11		
+					class LoginController extends HttpServlet/GenericServlet/Servlet
+					{
+					
+					
+					}
+					11*100=1100 heavy weight 
+					
+				EJB -->heavy weight component	
+					
+						light weight component
+					
+					rod johnson  -->2003 -->interface 21  ->spring  1.x
+					
+															spring 5.x
+					
+	spring 
+			core,jdbc,orm,security.....
+					
+				
+spring core:/IOC/dependency injection module
+============
+			setter injection		<property>
+			constructor injection	<constructor-arg>
+			autowiring 
+											Configurations
+													XML 
+													Annotation 
+													java 
+											
+			maven
+			
+			spring core 
+			spring context 
+
+		loosley coupled -->container -->		Beanfactory,ApplicationContext 
+
+
+
+Spring has given annotations for userdefined classes configuration like @component/@Service/@Repository...
+			but not for predefined classes like datasource,transaction....xml/java config
+
+
+	<bean id= class=  autowire scope>
+	<property name  value
+	<constructor-arg ref......
+
+		@Configuration
+		class SpringConfig
+		{
+		@Bean	
+		public Employee getEmployee()
+		{
+				return new Employee();
+		
+		}
+		
+		
+		}
+
+JPA:		bean/entity  table row -->ORM-->hibernate,eclipse link,top link,ibatis ...
+----	
+
+		
+		jpa jars,hibernate jars,mysql
+
+class-->table
+obj-->table row
+variables-->table columns
+ 
+			Employee 		JAVAX.Persistence.*
+
+		EntityManagerFactory  factory=Persistence.getEntityManagerFactory("unitname");
+		
+		EntityManager -->factory.getEntityManager(); methods persist,merge,remove,find,createQuery....
+		
+		
+		persistence.xml
+
+
+
+Spring Boot: spring	 4.x	
+
+
+			production ready applications
+
+
+		configuration
+				
+		server
+		
+		dependencies
+
+
+Spring boot
+		
+		1)Auto configuration :most of the commonly used classes already configured by the springboot
+		
+		2)embeded server/internal tomcat
+		
+		3)starters   2  starters dependencies
+		
+		4)Actuators  URL --insite/internals
+
+
+		STS
+
+		Rest API
+		
+		 s--->SOA
+																			 Interoperable
+		webservices is a technology which is used to communicate/share info between applications
+		
+		
+		sbi ATM card   --->icici atm machine ---> sbi app server 
+		
+		
+	AC,S,ES,A							JSON/XML
+SpringBootjpahibernaterestapi        <==========>   POSTMAN
+
+		empolyeecrud
+
+
+		1.x tomcat 
+		2.x hikari
+			c3po
+			combopooled
+			.....
+
+		JpaRepository & CrudRepository
+		
+		Exception handling 
+		
+		validations
+		
+		
+		Microservices:
+		===============
+	Microservices	says decompose larger projects into smaller services and later communicate them.
+
+
+
+
+						synchronous  RestTemplate http postForObject,delete,PostforEntity,getForObject.....
+						
+						asynchronous messaging protocols ,kafka,rabbitMQ,ActiveMQ.....
+
+
+
+consul agent -server -bootstrap-expect=1 -data-dir=consul-data2 -ui -bind="ip address"     
+
+common properties :
+====================
+
+in consul server key/values...by creating config/application/data paste it 
+
+spring:
+ datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  username: root
+  password: rpsconsulting
+ jpa:
+  show-sql: true
+  properties:
+   hibernate:
+    dialect : org.hibernate.dialect.MySQL5Dialect
+    ddl-auto: update
+
+
+		
